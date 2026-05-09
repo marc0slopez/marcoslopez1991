@@ -1,269 +1,441 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Marcos Lopez | Application Support Analyst</title>
-    <meta
-      name="description"
-      content="Presentacion profesional de Marcos Lopez: Application Support Analyst especializado en SQL, ERP, soporte tecnico funcional, Python y mejora de procesos."
-    >
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#inicio" aria-label="Inicio">
-        <span>ML</span>
-      </a>
-      <nav aria-label="Secciones principales">
-        <a href="#perfil">Perfil</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#educacion">Educacion</a>
-        <a href="#contacto">Contacto</a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marcos Lopez | Application Support Analyst</title>
+  <meta name="description"
+    content="Perfil profesional de Marcos Lopez: Application Support Analyst especializado en SQL, ERP, soporte tecnico funcional y Python.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#inicio">
+      <span class="brand-line"></span>
+      Marcos Lopez
+    </a>
+    <div class="header-right">
+      <nav aria-label="Navegacion principal">
+        <a href="#perfil" data-i18n="nav.perfil">Perfil</a>
+        <a href="#experiencia" data-i18n="nav.exp">Experiencia</a>
+        <a href="#habilidades" data-i18n="nav.skills">Habilidades</a>
+        <a href="#educacion" data-i18n="nav.edu">Educacion</a>
+        <a href="#contacto" data-i18n="nav.contact">Contacto</a>
       </nav>
-    </header>
+      <button class="lang-btn" id="lang-btn" aria-label="Cambiar idioma">
+        <span class="lang-opt active" id="lang-es">ES</span>
+        <span style="color:rgba(255,255,255,.2)">|</span>
+        <span class="lang-opt" id="lang-en">EN</span>
+      </button>
+    </div>
+  </header>
 
-    <main id="inicio">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Application Support Analyst · SQL · ERP · Python</p>
-          <h1>MARCOS HERNAN LOPEZ</h1>
-          <p class="lead">
-            Resuelvo incidencias, traduzco necesidades funcionales en soluciones
-            tecnicas y ayudo a que las aplicaciones criticas funcionen con orden,
-            criterio y foco en el negocio.
-          </p>
-          <div class="hero-highlights" aria-label="Resumen de valor profesional">
-            <span>Soporte tecnico funcional</span>
-            <span>Reportes y troubleshooting SQL</span>
-            <span>Automatizacion y mejora continua</span>
+  <main id="inicio">
+
+    <!-- ══ HERO ══ -->
+    <section class="hero">
+      <div class="hero-copy reveal-left">
+        <p class="hero-eyebrow">Buenos Aires, Argentina</p>
+        <h1>Marcos Hernan Lopez</h1>
+        <p class="hero-sub" data-i18n="hero.sub">
+          Application Support Analyst con foco en diagnostico tecnico, analisis SQL y optimizacion de sistemas ERP.
+          Convierto problemas complejos en soluciones concretas que impactan directamente en el negocio.
+        </p>
+        <div class="hero-tags">
+          <span>SQL · PL/SQL</span><span>ERP Softland</span><span>Python</span>
+          <span>Incident Management</span><span>Power Apps</span><span data-i18n="tag.agile">Metodologias Agile</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-white" href="assets/cv-marcos-lopez.pdf" target="_blank" rel="noreferrer">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span data-i18n="btn.cv">Descargar CV</span>
+          </a>
+          <a class="btn btn-outline-w" href="https://www.linkedin.com/in/marcoslopez1991" target="_blank"
+            rel="noreferrer">LinkedIn</a>
+          <a class="btn btn-outline-w" href="#contacto"><span data-i18n="nav.contact">Contacto</span></a>
+        </div>
+      </div>
+
+      <aside class="hero-panel reveal-right">
+        <div class="portrait-frame">
+          <img src="assets/marcos-lopez.png" alt="Marcos Lopez"
+            onerror="this.remove();this.parentElement.classList.add('missing-photo')">
+          <span>ML</span>
+        </div>
+        <p class="panel-name">Marcos Hernan Lopez</p>
+        <p class="panel-loc">📍 Buenos Aires, Argentina</p>
+        <hr class="panel-divider">
+        <div class="stagger">
+          <div class="panel-metric reveal">
+            <strong>+6</strong>
+            <span data-i18n="panel.years">Años en roles de analisis y soporte IT</span>
           </div>
-          <div class="hero-actions" aria-label="Acciones principales">
-            <a class="button primary" href="assets/cv-marcos-lopez.pdf" target="_blank" rel="noreferrer">Ver CV</a>
-            <a class="button" href="https://www.linkedin.com/in/marcoslopez1991" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="button ghost" href="#contacto">Contacto</a>
+          <div class="panel-metric reveal">
+            <strong>SQL</strong>
+            <span data-i18n="panel.sql">Queries, reportes y troubleshooting</span>
+          </div>
+          <div class="panel-metric reveal">
+            <strong>ERP</strong>
+            <span data-i18n="panel.erp">Optimizacion y soporte funcional</span>
           </div>
         </div>
+      </aside>
+    </section>
 
-        <aside class="hero-panel" aria-label="Resumen profesional">
-          <div class="portrait-frame">
-            <img
-              src="assets/marcos-lopez.png"
-              alt="Foto de perfil de Marcos Lopez"
-              onerror="this.remove(); this.parentElement.classList.add('missing-photo');"
-            >
-            <span aria-hidden="true">ML</span>
+    <!-- ══ PERFIL ══ -->
+    <section class="section" id="perfil">
+      <div class="sec-hdr">
+        <div class="reveal-left">
+          <span class="eyebrow" data-i18n="sec.perfil.eyebrow">Perfil profesional</span>
+          <h2 data-i18n="sec.perfil.h2">Analisis tecnico con mirada funcional</h2>
+        </div>
+        <p class="sec-desc reveal-right" data-i18n="sec.perfil.desc">
+          Me especializo en soporte de aplicaciones, resolucion de incidencias y analisis tecnico sobre bases
+          de datos SQL. Trabajo con equipos de desarrollo, areas funcionales y clientes para relevar problemas,
+          documentar avances y convertir necesidades operativas en soluciones claras. Mi experiencia combina ERP,
+          reportes customizados, testing, seguimiento de issues y automatizacion con Python.
+        </p>
+      </div>
+      <div class="about-grid stagger">
+        <div class="about-item reveal">
+          <div class="about-num">01</div>
+          <h3 data-i18n="about.1.h">Diagnostico</h3>
+          <p data-i18n="about.1.p">Identifico errores, reviso evidencias y bajo problemas complejos a causas
+            accionables.</p>
+        </div>
+        <div class="about-item reveal">
+          <div class="about-num">02</div>
+          <h3 data-i18n="about.2.h">Solucion</h3>
+          <p data-i18n="about.2.p">Trabajo sobre SQL, ERP, APIs y aplicaciones para resolver incidentes y mejorar
+            procesos.</p>
+        </div>
+        <div class="about-item reveal">
+          <div class="about-num">03</div>
+          <h3 data-i18n="about.3.h">Seguimiento</h3>
+          <p data-i18n="about.3.p">Documento avances, coordino con desarrollo y acompano a usuarios hasta el cierre.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ EXPERIENCIA ══ -->
+    <section class="section alt" id="experiencia">
+      <div class="sec-hdr">
+        <div class="reveal-left">
+          <span class="eyebrow" data-i18n="sec.exp.eyebrow">Trayectoria</span>
+          <h2 data-i18n="sec.exp.h2">Experiencia profesional</h2>
+        </div>
+        <p class="sec-desc reveal-right" data-i18n="sec.exp.desc">
+          Mas de 6 años de experiencia en roles de analisis, soporte tecnico y funcional en empresas
+          tecnologicas y de servicios, con foco en calidad, procesos y mejora continua.
+        </p>
+      </div>
+
+      <div class="timeline stagger">
+
+        <!-- Timbo -->
+        <article class="tl-item reveal">
+          <div class="tl-left">
+            <div class="tl-logos">
+              <div class="tl-logo">
+                <img
+                  src="https://media.licdn.com/dms/image/v2/C4E0BAQHaZ1jyvw-uzQ/company-logo_200_200/company-logo_200_200/0/1630621509264?e=1779926400&v=beta&t=7tlF5-_CXiTqetUSs28jnMiaKGuLwB8v4Ld5iuTb42g"
+                  alt="Timbo" loading="lazy">
+              </div>
+            </div>
+            <div class="tl-period" data-i18n="exp.timbo.period">Dic 2022 – Actualidad</div>
+            <div class="tl-emp">Timbo</div>
           </div>
-          <div class="panel-intro">
-            <p class="panel-label">Base</p>
-            <p>Buenos Aires, Argentina</p>
-          </div>
-          <div class="metric-grid">
-            <div>
-              <strong>+3</strong>
-              <span>Años en soporte de aplicaciones</span>
-            </div>
-            <div>
-              <strong>SQL</strong>
-              <span>Queries, reportes y troubleshooting</span>
-            </div>
-            <div>
-              <strong>ERP</strong>
-              <span>Optimizacion y soporte funcional</span>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <section class="section intro" id="perfil">
-        <div class="section-heading">
-          <p class="eyebrow">Perfil profesional</p>
-          <h2>Analisis tecnico con mirada funcional</h2>
-        </div>
-        <div class="intro-content">
-          <p>
-            Me especializo en soporte de aplicaciones, resolucion de incidencias y
-            analisis tecnico sobre bases de datos SQL. Trabajo con equipos de
-            desarrollo, areas funcionales y clientes para relevar problemas,
-            documentar avances y convertir necesidades operativas en soluciones
-            claras.
-          </p>
-          <p>
-            Mi experiencia combina ERP, reportes customizados, testing, seguimiento
-            de issues y automatizacion con Python. Busco aportar orden, criterio y
-            mejora continua en entornos donde la calidad del soporte impacta
-            directamente en el negocio.
-          </p>
-        </div>
-      </section>
-
-      <section class="section value-strip" aria-label="Propuesta de valor">
-        <article>
-          <span>01</span>
-          <h3>Diagnostico</h3>
-          <p>Identifico errores, reviso evidencias y bajo problemas complejos a causas accionables.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Solucion</h3>
-          <p>Trabajo sobre SQL, ERP, APIs y aplicaciones para resolver incidentes y mejorar procesos.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Seguimiento</h3>
-          <p>Documento avances, coordino con desarrollo y acompano a usuarios hasta el cierre.</p>
-        </article>
-      </section>
-
-      <section class="section" id="experiencia">
-        <div class="section-heading">
-          <p class="eyebrow">Trayectoria</p>
-          <h2>Experiencia profesional</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="time">Dic 2022 - Actualidad</div>
-            <div class="role">
-              <h3>Application Support Analyst</h3>
-              <p class="company">Timbo</p>
-              <ul>
-                <li>Analisis y resolucion de problemas en bases de datos SQL.</li>
-                <li>Creacion de reportes customizados mediante queries a medida.</li>
-                <li>Optimizacion de procesos dentro del ERP Softland.</li>
-                <li>Soporte tecnico y funcional a areas clave del negocio.</li>
-                <li>Automatizacion de tareas con flujos en Python y mantenimiento en Power Apps.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="time">Ene 2022 - Nov 2022</div>
-            <div class="role">
-              <h3>Technical Support Analyst</h3>
-              <p class="company">Visma LatAm</p>
-              <ul>
-                <li>Analisis, relevamiento e identificacion de errores en ASP y .NET.</li>
-                <li>Armado y analisis de reportes SQL.</li>
-                <li>Reporte, seguimiento de evidencias y documentacion de implementaciones.</li>
-                <li>Interaccion con desarrollo y analisis funcional.</li>
-                <li>Capacitacion tecnica de APIs disponibles a clientes.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <div class="time">Oct 2019 - Dic 2021</div>
-            <div class="role">
-              <h3>Functional Support Analyst</h3>
-              <p class="company">Visma LatAm</p>
-              <ul>
-                <li>Analisis funcional de software de RRHH.</li>
-                <li>Testing, armado y seguimiento de requerimientos.</li>
-                <li>Soporte a clientes sobre usabilidad del sistema.</li>
-                <li>Seguimiento de issues, ABM de modulos y demos a potenciales clientes.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item compact">
-            <div class="time">2012 - 2019</div>
-            <div class="role">
-              <h3>Payroll Analyst</h3>
-              <p class="company">JNext | NGA Human Resources / Alight</p>
-              <p>
-                Experiencia en procesos de payroll para clientes corporativos,
-                incluyendo Grupo Techint y SAP, con foco en continuidad operativa,
-                precision y soporte al usuario.
-              </p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split" id="habilidades">
-        <div class="section-heading">
-          <p class="eyebrow">Stack tecnico</p>
-          <h2>Herramientas y capacidades</h2>
-        </div>
-        <div class="skill-layout">
-          <div class="skill-card featured">
-            <h3>Especialidades</h3>
-            <div class="tags">
-              <span>SQL</span>
-              <span>PL/SQL</span>
-              <span>ERP</span>
-              <span>Python</span>
-              <span>Testing</span>
-              <span>Postman</span>
-              <span>Power Apps</span>
-              <span>Incident Management</span>
-              <span>Functional Analysis</span>
-            </div>
-          </div>
-          <div class="skill-card">
-            <h3>Fortalezas de trabajo</h3>
-            <ul class="check-list">
-              <li>Resolucion de incidencias con criterio tecnico.</li>
-              <li>Orientacion al cliente interno y externo.</li>
-              <li>Documentacion clara de avances, evidencias e implementaciones.</li>
-              <li>Colaboracion con desarrollo, funcionales y usuarios de negocio.</li>
+          <div>
+            <div class="tl-role" data-i18n="exp.timbo.role">Application Support Analyst</div>
+            <div class="tl-company" data-i18n="exp.timbo.type">Timbo · Tiempo completo</div>
+            <ul class="tl-bullets" data-i18n-list="exp.timbo.bullets">
+              <li>Analisis y resolucion de problemas en bases de datos SQL.</li>
+              <li>Creacion de reportes customizados mediante queries a medida.</li>
+              <li>Optimizacion de procesos dentro del ERP Softland.</li>
+              <li>Soporte tecnico y funcional a areas clave del negocio.</li>
+              <li>Automatizacion de tareas con Python y mantenimiento en Power Apps.</li>
             </ul>
           </div>
-        </div>
-      </section>
+        </article>
 
-      <section class="section education" id="educacion">
-        <div class="section-heading">
-          <p class="eyebrow">Formacion</p>
-          <h2>Educacion y cursos</h2>
-        </div>
-        <div class="education-grid">
-          <article>
-            <span>2026 - En curso</span>
-            <h3>Analista de Sistemas</h3>
-            <p>Instituto Tecnologico de Educacion Superior ORT Argentina</p>
-          </article>
-          <article>
-            <span>2019 - 2023</span>
-            <h3>Administracion de Empresas</h3>
-            <p>Fundacion de Altos Estudios en Ciencias Economicas</p>
-          </article>
-          <article>
-            <span>2024</span>
-            <h3>Curso de Python</h3>
-            <p>Coderhouse</p>
-          </article>
-          <article>
-            <span>2022 - 2023</span>
-            <h3>SQL - Curso completo de Bases de Datos</h3>
-            <p>Udemy</p>
-          </article>
-        </div>
-      </section>
+        <!-- Visma LatAm – Technical -->
+        <article class="tl-item reveal">
+          <div class="tl-left">
+            <div class="tl-logos">
+              <div class="tl-logo">
+                <img
+                  src="https://media.licdn.com/dms/image/v2/D4E0BAQH1lcGqe7Juyw/company-logo_200_200/B4EZv6pmijHwAI-/0/1769436768974/mandu_hr_logo?e=1779926400&v=beta&t=cXwjopAn30oCc6fBEjAYeOTA6Sz5miPYQGUJz3VR6eY"
+                  alt="Visma LatAm" loading="lazy">
+              </div>
+            </div>
+            <div class="tl-period" data-i18n="exp.visma1.period">Ene 2022 – Nov 2022</div>
+            <div class="tl-emp">Visma LatAm</div>
+          </div>
+          <div>
+            <div class="tl-role" data-i18n="exp.visma1.role">Technical Support Analyst</div>
+            <div class="tl-company" data-i18n="exp.visma1.type">Visma LatAm · Tiempo completo</div>
+            <ul class="tl-bullets" data-i18n-list="exp.visma1.bullets">
+              <li>Analisis e identificacion de errores en ASP y .NET.</li>
+              <li>Armado y analisis de reportes SQL.</li>
+              <li>Reporte, seguimiento de evidencias y documentacion de implementaciones.</li>
+              <li>Interaccion con equipos de desarrollo y analisis funcional.</li>
+              <li>Capacitacion tecnica de APIs disponibles a clientes.</li>
+            </ul>
+          </div>
+        </article>
 
-      <section class="contact-section" id="contacto">
-        <div>
-          <p class="eyebrow">Contacto</p>
-          <h2>Disponible para nuevos desafios en IT</h2>
-          <p>
-            Busco oportunidades donde pueda aportar soporte tecnico funcional,
-            analisis de datos, mejora de procesos y cercania con usuarios de negocio.
+        <!-- Visma LatAm – Functional -->
+        <article class="tl-item reveal">
+          <div class="tl-left">
+            <div class="tl-logos">
+              <div class="tl-logo">
+                <img
+                  src="https://media.licdn.com/dms/image/v2/D4E0BAQH1lcGqe7Juyw/company-logo_200_200/B4EZv6pmijHwAI-/0/1769436768974/mandu_hr_logo?e=1779926400&v=beta&t=cXwjopAn30oCc6fBEjAYeOTA6Sz5miPYQGUJz3VR6eY"
+                  alt="Visma LatAm" loading="lazy">
+              </div>
+            </div>
+            <div class="tl-period" data-i18n="exp.visma2.period">Oct 2019 – Dic 2021</div>
+            <div class="tl-emp">Visma LatAm</div>
+          </div>
+          <div>
+            <div class="tl-role" data-i18n="exp.visma2.role">Functional Support Analyst</div>
+            <div class="tl-company" data-i18n="exp.visma2.type">Visma LatAm · Tiempo completo</div>
+            <ul class="tl-bullets" data-i18n-list="exp.visma2.bullets">
+              <li>Analisis funcional de software de RRHH.</li>
+              <li>Testing, armado y seguimiento de requerimientos.</li>
+              <li>Soporte a clientes sobre usabilidad del sistema.</li>
+              <li>Seguimiento de issues, ABM de modulos y demos a potenciales clientes.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- JNext / NGA / Alight – dual logo -->
+        <article class="tl-item reveal">
+          <div class="tl-left">
+            <div class="tl-logos">
+              <div class="tl-logo">
+                <img
+                  src="https://media.licdn.com/dms/image/v2/C560BAQHb-sPb_XjaWA/company-logo_200_200/company-logo_200_200/0/1631332997032?e=1779926400&v=beta&t=hGIQ_KDT99M9YdOPlTf_S8uszF6KUnn0eDrYFNbi4dc"
+                  alt="JNext" loading="lazy">
+              </div>
+              <div class="tl-logo">
+                <img
+                  src="https://media.licdn.com/dms/image/v2/C4E0BAQHuq8iTZ2qDng/company-logo_200_200/company-logo_200_200/0/1630598774380/ngahr_logo?e=1779926400&v=beta&t=dAgCVAWBmMeEeWy742hWdWyLZsJToIxaUP0_BR7hnrY"
+                  alt="NGA Human Resources / Alight" loading="lazy">
+              </div>
+            </div>
+            <div class="tl-period" data-i18n="exp.nga.period">2012 – 2019</div>
+            <div class="tl-emp">JNext | NGA / Alight</div>
+          </div>
+          <div>
+            <div class="tl-role" data-i18n="exp.nga.role">Payroll Analyst</div>
+            <div class="tl-company" data-i18n="exp.nga.type">JNext | NGA Human Resources / Alight · Tiempo completo
+            </div>
+            <ul class="tl-bullets" data-i18n-list="exp.nga.bullets">
+              <li>Gestion de procesos de payroll para clientes corporativos, incluyendo Grupo Techint y SAP.</li>
+              <li>Foco en continuidad operativa, precision y soporte al usuario.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══ HABILIDADES ══ -->
+    <section class="section" id="habilidades">
+      <div class="sec-hdr">
+        <div class="reveal-left">
+          <span class="eyebrow" data-i18n="sec.skills.eyebrow">Stack tecnico</span>
+          <h2 data-i18n="sec.skills.h2">Herramientas y capacidades</h2>
+        </div>
+        <p class="sec-desc reveal-right" data-i18n="sec.skills.desc">
+          Domino herramientas tecnicas de analisis, soporte y automatizacion, combinadas con
+          habilidades funcionales orientadas al negocio y al cliente.
+        </p>
+      </div>
+      <div class="skills-layout">
+        <div class="skills-block reveal-left">
+          <h3 data-i18n="skills.tech">Especializaciones</h3>
+          <div class="tags" style="margin-top:.75rem">
+            <span>SQL</span><span>PL/SQL</span><span>ERP</span>
+            <span>Python</span><span>Power Apps</span><span>Postman</span>
+            <span>APIs REST</span><span>ASP / .NET</span>
+            <span data-i18n="tag.testing">Testing funcional</span>
+            <span>Incident Management</span><span>Scrum</span><span>Kanban</span>
+          </div>
+        </div>
+        <div class="skills-block reveal-right">
+          <h3 data-i18n="skills.soft">Fortalezas de trabajo</h3>
+          <ul class="check-list" style="margin-top:.75rem">
+            <li data-i18n="skills.s1">Resolucion de incidencias con criterio tecnico y funcional.</li>
+            <li data-i18n="skills.s2">Orientacion al cliente interno y externo.</li>
+            <li data-i18n="skills.s3">Documentacion clara de avances, evidencias e implementaciones.</li>
+            <li data-i18n="skills.s4">Colaboracion con equipos de desarrollo y areas de negocio.</li>
+            <li data-i18n="skills.s5">Mejora continua y automatizacion de procesos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ EDUCACION ══ -->
+    <section class="section alt" id="educacion">
+      <div class="sec-hdr">
+        <div class="reveal-left">
+          <span class="eyebrow" data-i18n="sec.edu.eyebrow">Formacion</span>
+          <h2 data-i18n="sec.edu.h2">Educacion y certificaciones</h2>
+        </div>
+        <p class="sec-desc reveal-right" data-i18n="sec.edu.desc">
+          Formacion tecnica y de gestion que combina sistemas, administracion de empresas
+          y herramientas de desarrollo de software.
+        </p>
+      </div>
+      <div class="edu-grid stagger">
+
+        <!-- ORT -->
+        <article class="edu-card reveal">
+          <div class="edu-logo">
+            <img
+              src="https://media.licdn.com/dms/image/v2/C4E0BAQFago4fQ3aqjA/company-logo_200_200/company-logo_200_200/0/1630584817701/ort_argentina_logo?e=1779926400&v=beta&t=G9abT1NQQnDDNdv3I0xMWKNm3HsP6P1BnLipZd1xTRA"
+              alt="ORT Argentina" loading="lazy">
+          </div>
+          <div class="edu-year" data-i18n="edu.ort.year">2026 – En curso</div>
+          <div class="edu-title" data-i18n="edu.ort.title">Analista de Sistemas</div>
+          <div class="edu-inst">ORT Argentina</div>
+        </article>
+
+        <!-- FAECC -->
+        <article class="edu-card reveal">
+          <div class="edu-logo">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4D0BAQF9bYxju-CjiA/company-logo_200_200/company-logo_200_200/0/1680527697898/fundacion_de_altos_estudios_en_ciencias_comerciales_logo?e=1779926400&v=beta&t=65NfgyYyaf6Ml_KCev5h-lQ7p1D6dUZhtthp5yBvfGY"
+              alt="FAECC" loading="lazy">
+          </div>
+          <div class="edu-year">2019 – 2023</div>
+          <div class="edu-title" data-i18n="edu.faecc.title">Administracion de Empresas</div>
+          <div class="edu-inst" data-i18n="edu.faecc.inst">Fundacion de Altos Estudios en Ciencias Comerciales (FAECC)
+          </div>
+          <a class="edu-cred" href="https://sisfet-firma.educacion.gob.ar/d/172835yJ8Wc14oY9gTe6S5" target="_blank"
+            rel="noreferrer">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span data-i18n="edu.faecc.cred">Ver titulo oficial</span>
+          </a>
+        </article>
+
+        <!-- Coderhouse Python -->
+        <article class="edu-card reveal">
+          <div class="edu-logo">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4D0BAQEKneeI5o6n-g/company-logo_200_200/B4DZxM5lOxJUAU-/0/1770816689499/coderhouse_logo?e=1779926400&v=beta&t=nzmNVmym_MGdmCyBebAUX6frKrBqh3B8XCF8iHMtuuk"
+              alt="Coderhouse" loading="lazy">
+          </div>
+          <div class="edu-year">2024</div>
+          <div class="edu-title" data-i18n="edu.coder.title">Python-Desarrollo Web</div>
+          <div class="edu-inst">Coderhouse</div>
+          <a class="edu-link" href="https://www.youtube.com/watch?v=p_PUacouDtg" target="_blank" rel="noreferrer">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            <span data-i18n="edu.coder.link">Ver proyecto final</span>
+          </a>
+        </article>
+
+        <!-- Santander Universidades – Agile -->
+        <article class="edu-card reveal">
+          <div class="edu-logo">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4D0BAQHbRU5HNC8kOA/company-logo_200_200/company-logo_200_200/0/1701098269536/santander_universidades_logo?e=1779926400&v=beta&t=XLCRXV672w3358yRAf_qOHjwSe_iwi-VxrwjQrxWtcI"
+              alt="Santander Universidades" loading="lazy">
+          </div>
+          <div class="edu-year">2022 – 2023</div>
+          <div class="edu-title" data-i18n="edu.agile.title">Metodologias Agile (Scrum / Kanban)</div>
+          <div class="edu-inst">Santander Universidades</div>
+          <a class="edu-cred" href="#" target="_blank" rel="noreferrer">
+            <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span data-i18n="edu.agile.cred">Ver certificado</span>
+          </a>
+        </article>
+
+        <!-- Udemy SQL -->
+        <article class="edu-card reveal">
+          <div class="edu-logo" style="background:#a435f0;border-color:#a435f0">
+            <svg viewBox="0 0 36 36" style="width:26px;height:26px"><text x="18" y="25" text-anchor="middle"
+                font-family="Inter,sans-serif" font-size="20" font-weight="700" fill="#fff">U</text></svg>
+          </div>
+          <div class="edu-year">2022 – 2023</div>
+          <div class="edu-title" data-i18n="edu.sql.title">SQL – Curso completo de Bases de Datos</div>
+          <div class="edu-inst">Udemy</div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══ CONTACTO ══ -->
+    <section class="section" id="contacto">
+      <div class="contact-wrap">
+        <div class="contact-intro reveal-left">
+          <span class="eyebrow" data-i18n="sec.contact.eyebrow">Contacto</span>
+          <h2 data-i18n="sec.contact.h2">Disponible para nuevos desafios en IT</h2>
+          <p data-i18n="sec.contact.desc">
+            Busco oportunidades donde pueda aportar soporte tecnico funcional, analisis de datos,
+            mejora de procesos y cercania con usuarios de negocio. Estoy abierto a roles de
+            analisis, soporte L2/L3 y proyectos de automatizacion.
           </p>
         </div>
-        <div class="contact-actions">
-          <a href="mailto:marcoslopez.1991@hotmail.com">marcoslopez.1991@hotmail.com</a>
-          <a href="tel:+541154866632">+54 11 5486-6632</a>
-          <a href="assets/linkedin-profile.pdf" target="_blank" rel="noreferrer">Perfil LinkedIn PDF</a>
+        <div class="contact-links stagger reveal-right">
+          <a class="contact-link" href="mailto:marcoslopez.1991@hotmail.com">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M2 7l10 7 10-7" />
+            </svg>
+            marcoslopez.1991@hotmail.com
+          </a>
+          <a class="contact-link" href="tel:+541154866632">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.17 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            +54 11 5486-6632
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/marcoslopez1991" target="_blank" rel="noreferrer">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            linkedin.com/in/marcoslopez1991
+          </a>
+          <a class="contact-link" href="assets/cv-marcos-lopez.pdf" target="_blank" rel="noreferrer">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+            <span data-i18n="btn.cv">Descargar CV</span>
+          </a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-      <p>Marcos Lopez - Functional & Technical Analyst - Buenos Aires</p>
-    </footer>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <footer>
+    <p>© 2025 Marcos Hernan Lopez · Application Support Analyst · Buenos Aires, Argentina</p>
+    <p data-i18n="footer.built">Desarrollado con HTML, CSS y JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
