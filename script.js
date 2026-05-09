@@ -191,6 +191,32 @@ document.getElementById('lang-btn').addEventListener('click', () => {
 // Initial apply
 applyLang(currentLang);
 
+function ensureEducationLinks() {
+  const ortCard = document.querySelector('[data-i18n="edu.ort.title"]')?.closest('.edu-card');
+  if (ortCard && !ortCard.querySelector('[data-auto-link="ort-plan"]')) {
+    const link = document.createElement('a');
+    link.className = 'edu-link';
+    link.href = 'https://www.ort.edu.ar/terciario/plandeestudios/plan_analista_sistemas.pdf';
+    link.target = '_blank';
+    link.rel = 'noreferrer';
+    link.dataset.autoLink = 'ort-plan';
+    link.innerHTML = `
+      <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+        <polyline points="14 2 14 8 20 8" />
+      </svg>
+      <span data-i18n="edu.ort.plan">${T[currentLang]['edu.ort.plan']}</span>
+    `;
+    ortCard.appendChild(link);
+  }
+
+  const agileCard = document.querySelector('[data-i18n="edu.agile.title"]')?.closest('.edu-card');
+  const agileLink = agileCard?.querySelector('.edu-cred');
+  if (agileLink) agileLink.href = 'assets/certificado-agile-santander.html';
+}
+
+ensureEducationLinks();
+
 
 // ── Header shadow on scroll ───────────────────────────────
 const header = document.getElementById('site-header');
